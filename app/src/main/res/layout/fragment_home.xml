@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1DDDD"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#F5FDFCFC"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="#E1E1D9D9"
+                app:cardCornerRadius="10dp">
+
+                <SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="45dp"
+                    android:layout_height="2.5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="14.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/orange_500" />
+
+                <TextView
+                    android:id="@+id/breakfast_text"
+                    android:layout_width="10dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/breakfast"
+                    android:textAlignment="center"
+                    android:textColor="#888080"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="45dp"
+                    android:layout_height="2.5dp"
+                    android:layout_marginTop="14.5dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@color/orange_500" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/item_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/idly"
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/idly"
+                    android:cropToPadding="true"
+                    android:scaleX="1.1"
+                    android:scaleY="1.135"
+                    app:srcCompat="@drawable/idli" />
+
+                <TextView
+                    android:id="@+id/orderIdName"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/idly_"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/idly_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/idly_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/poori_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/poori"
+                    android:layout_width="match_parent"
+                    android:layout_height="252dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/poori"
+                    android:cropToPadding="true"
+                    android:fitsSystemWindows="false"
+                    android:scaleX="1.1"
+                    android:scaleY="1.128"
+                    app:srcCompat="@drawable/poori_masala" />
+
+                <TextView
+                    android:id="@+id/poori_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/poori"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/poori_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/poori_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vada_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/vada"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/vada"
+                    android:cropToPadding="true"
+                    app:srcCompat="@drawable/vada" />
+
+                <TextView
+                    android:id="@+id/vada_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/vada"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/vada_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/vada_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dosa_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/dosa"
+                    android:layout_width="match_parent"
+                    android:layout_height="249dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/dosa"
+                    android:cropToPadding="true"
+                    android:scaleY="1.625"
+                    app:srcCompat="@drawable/dosa" />
+
+                <TextView
+                    android:id="@+id/dosa_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/dosa"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dosa_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/dosa_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chappathi_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/chappathi"
+                    android:layout_width="match_parent"
+                    android:layout_height="242dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/chappathi"
+                    android:cropToPadding="true"
+                    android:scaleY="1.1"
+                    app:srcCompat="@drawable/chapati" />
+
+                <TextView
+                    android:id="@+id/chappathi_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/chappathi"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chappathi_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/chappathi_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view2_lunch"
+                    android:layout_width="45dp"
+                    android:layout_height="2.5dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="14.5dp"
+                    android:layout_weight="1"
+                    android:background="@color/orange_500" />
+
+                <TextView
+                    android:id="@+id/lunch_text"
+                    android:layout_width="10dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/lunch"
+                    android:textAlignment="center"
+                    android:textColor="#888080"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view3_lunch"
+                    android:layout_width="45dp"
+                    android:layout_height="2.5dp"
+                    android:layout_marginTop="14.5dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@color/orange_500" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/meals_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/meals"
+                    android:layout_width="match_parent"
+                    android:layout_height="252dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/meals"
+                    android:cropToPadding="true"
+                    android:scaleX="1.1"
+                    app:srcCompat="@drawable/meals_img" />
+
+                <TextView
+                    android:id="@+id/meals_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/meals"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/meals_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/meals_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thali_meals_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/thali_meals"
+                    android:layout_width="match_parent"
+                    android:layout_height="253dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/thali_meals"
+                    android:cropToPadding="true"
+                    android:scaleY="1.12"
+                    app:srcCompat="@drawable/indian_thali" />
+
+                <TextView
+                    android:id="@+id/thali_meals_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/thali_meals"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/thali_meals_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/thali_meals_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chicken_briyani_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/chicken_briyani"
+                    android:layout_width="match_parent"
+                    android:layout_height="251dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/chicken_briyani"
+                    android:cropToPadding="true"
+                    android:scaleX="1.1"
+                    android:scaleY="1.009"
+                    app:srcCompat="@drawable/chicken__" />
+
+                <TextView
+                    android:id="@+id/chicken_briyani_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/chicken_briyani"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chicken_briyani_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="idly_quantity" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/chicken_briyani_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mutton_briyani_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="150dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/mutton_briyani"
+                    android:layout_width="match_parent"
+                    android:layout_height="241dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/mutton_briyani"
+                    android:cropToPadding="true"
+                    android:scaleY="1.1"
+                    app:srcCompat="@drawable/mutton__" />
+
+                <TextView
+                    android:id="@+id/mutton_briyani_image_text"
+                    android:layout_width="180dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="252dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/mutton_briyani"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mutton_briyani_add"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableEnd="@drawable/add_symbol"
+                    android:drawablePadding="-55dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="40dp"
+                    android:paddingBottom="7dp"
+                    android:text="Add"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <com.example.foodie.ClickableTextView
+                    android:id="@+id/mutton_briyani_quantity"
+                    android:layout_width="180dp"
+                    android:layout_height="61dp"
+                    android:layout_marginStart="180dp"
+                    android:layout_marginTop="252dp"
+                    android:background="@color/orange_500"
+                    android:drawableStart="@drawable/minus_symbol"
+                    android:drawableEnd="@drawable/add_quantity"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:visibility="invisible" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
